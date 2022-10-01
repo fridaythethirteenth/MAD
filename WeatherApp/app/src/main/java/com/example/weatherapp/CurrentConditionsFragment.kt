@@ -14,7 +14,9 @@ class CurrentConditionsFragment : Fragment(R.layout.fragment_current_conditions)
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentCurrentConditionsBinding.bind(view)
         binding.forecastButton.setOnClickListener {
-            findNavController().navigate(R.id.action_currentConditionsFragment_to_forecastFragment)
+            val forecast = Forecast("75")
+            val action = CurrentConditionsFragmentDirections.actionCurrentConditionsFragmentToForecastFragment(forecast)
+            findNavController().navigate(action)
         }
     }
 }
