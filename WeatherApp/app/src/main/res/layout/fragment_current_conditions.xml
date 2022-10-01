@@ -10,7 +10,7 @@
         android:id="@+id/city_name"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:text="St. Paul, MN"
+        android:text="@string/city_name"
         android:textAlignment="center"
         android:textSize="18sp"
         android:background="@color/black"

@@ -10,12 +10,19 @@
         android:label="CurrentConditionsFragment" >
         <action
             android:id="@+id/action_currentConditionsFragment_to_forecastFragment"
-            app:destination="@id/forecastFragment" />
+            app:destination="@id/forecastFragment" >
+        </action>
+
+
     </fragment>
 
     <fragment
         android:id="@+id/forecastFragment"
-        android:name="com.example.weatherapp.CurrentConditionsFragment"
-        android:label="ForecastFragment"
-            />
+        android:name="com.example.weatherapp.ForecastFragment"
+        android:label="ForecastFragment" >
+        <argument
+            android:name="forecast"
+            app:nullable="false"
+            app:argType="com.example.weatherapp.Forecast" />
+    </fragment>
 </navigation>
